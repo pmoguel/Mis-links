@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ExtraBlur';
+    src: url('ExtraBlur.woff2') format('woff2'),
+        url('ExtraBlur.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
