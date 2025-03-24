@@ -1,7 +1,6 @@
 /* TEAM */
-	WebCraftDev: JuanFuent.es
-	Contact: input [at] juanfuent.es
-	From: Hidalgo, Mexico
+	WebCraftDev: Patricio Moguel
+	From: CDMX, Mexico
 
 /* SITE */
 	Last update: 2025/03/05
