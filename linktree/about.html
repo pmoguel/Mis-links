@@ -31,12 +31,33 @@
             <h1>About Me</h1>
         </header>
         <div class="content-wrapper">
+            <h3>
             My name is Patricio and I'm a Creative Computing student.
-            I'm 19 years old, passionate about music, and my dream job is one that combines computing with music in some way.
+            I'm nineteen years old, passionate about music, and my dream job is one that combines computing with music in some way.
             I love watching sports (mainly football) and rooting for bad teams.
-            I like to think I'm someone very open and social, someone whose relationships with other people mean the world to him.   
+            I like to think I'm someone very open and social, someone whose relationships with other people mean the world to him.  
+            </h3>
         </div>
+        <div class="about-images">
+            <img src="../img/pajaros.jpg" alt="Picture with birds" class="Me with birds">
+            <img src="../img/paloma.jpg" alt="Picture with pigeon" class="Me with Pigeon">
+        </div>
+    </div>
+    
     </main>
 </body>
 
 </html>
+
+<script>
+    window.addEventListener("scroll", function() {
+        const logo = document.getElementById("logo");
+        if (window.scrollY > 0) {
+            logo.style.width = "30px";
+        } else {
+            logo.style.width = "100px";
+        }
+    });
+</script>
+
+</body> 
