@@ -15,6 +15,17 @@
     }
 
     @font-face {
+        font-family: 'Corrupter';
+        src: url('../fonts/Corrupter.woff2') format('woff2'),
+            url('../fonts/Corrupter.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    
+
+    @font-face {
         font-family: 'New Romantics';
         src: url('../fonts/NewRomantics.woff2') format('woff2'),
             url('../fonts/NewRomantics.woff') format('woff');
@@ -152,7 +163,7 @@ hr {
 }
 
 h1 {
-    font-family: 'ExtraBlur', sans-serif;
+    font-family: 'Corrupter', sans-serif;
     font-size: 3.2em;
     letter-spacing: 0.2em;
     width: 100%;
@@ -165,7 +176,7 @@ h1 {
 
 h2 {
     font-weight: 10;
-    font-family: ExtraBlur, sans-serif;
+    font-family: Corrupter, sans-serif;
     text-align: center;
     margin-bottom: 20px;
     margin-left: -2.5em;
