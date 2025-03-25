@@ -2,18 +2,37 @@
 
 :root {
     --bg-color: #09284a;
-    --title-color: #d2fcff;
+    --title-color: #ffffff;
     --text-color: #D2ACFF;
     --high-color: #ffffff;
     }
     
     @media (prefers-color-scheme: dark) {
         :root {
-            --bg-color: #09284a;
+            --bg-color: #0f5aa9;
             --text-color: #d2fcff;
         }
     }
 
+    @font-face {
+        font-family: 'masquerouge';
+        src: url('masquerouge.woff2') format('woff2'),
+            url('masquerouge.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'Pissjar Sans piss';
+        src: url('PissjarSans-Regularpiss.woff2') format('woff2'),
+            url('PissjarSans-Regularpiss.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    
 
  @font-face {
     font-family: 'ExtraBlur';
@@ -26,9 +45,10 @@
 
 body {
    color: var(--title-color);
+   background: url('../img/bg.jpg') center center;
+   background-size: cover;
    background-color: var(--bg-color);
-    font-family: 'ExtraBlur', sans-serif;
-    font-weight: 400;
+    font-family: 'Pissjar Sans piss', sans-serif;
     display: initial;
 }
 
@@ -37,9 +57,11 @@ body {
 }
 
 #challenge-container {
-    max-width: 640px;
-    color: var(--text-color);
+    max-width: 1300px; /* Adjust width to desired value */
+    margin: 0 auto; /* Centers the container */
+    padding-top: 50px; /* Adds spacing on all sides */
 }
+
 
 /* nav */
 nav#challenge-nav {
@@ -109,17 +131,21 @@ hr {
 }
 
 h1 {
-    font-family: ExtraBlur, sans-serif;
+    font-family: Pissjar Sans piss', sans-serif;
     font-size: 3.2em;
-    font-weight: 600;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
     width: 100%;
     text-align: center;
+    font-display: swap;
+    margin: 0 auto; 
+    margin-top: 80px;
 }
 
 h2 {
-    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px; 
 }
+
 
 p {
     font-size: 1.5em;
@@ -132,4 +158,117 @@ p {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+}
+
+.left-column {
+    align-self: flex-start;
+    flex: 1;
+    padding: 20px;
+    text-align: center; 
+}
+
+picture img {
+    display: block;
+    margin: 0 auto; 
+}
+
+.right-column {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+nav#challenge-nav ul {
+    text-align: left; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+.challenge-link {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.challenge-link:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+header#challenge-main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent; 
+    padding: 10px;
+    z-index: 0;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto; 
+    margin-bottom: 10px;
+    position: relative; 
+}
+
+.about-me {
+    margin-top: 20px; 
+    text-align: center;
+}
+
+.about-me a {
+    font-size: 3em;
+}
+
+.right-column h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#challenge-nav ul li a {
+    font-size: 1.6em;
+    line-height: 2em; 
+}
+
+.image-hover {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+}
+
+.hover-img {
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-hover:hover .hover-img {
+    content: none;
+    opacity: 0;
+}
+
+.image-hover:hover {
+    background-image: url('../img/mocap.png'); /* Replace with the hover image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto; /* Adjust height as needed */
+}
+
+header#challenge-main-header {
+    z-index: 1000;
 }

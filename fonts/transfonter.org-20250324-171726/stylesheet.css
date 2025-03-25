@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Pissjar Sans piss';
+    src: url('PissjarSans-Regularpiss.woff2') format('woff2'),
+        url('PissjarSans-Regularpiss.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'masquerouge';
+    src: url('masquerouge.woff2') format('woff2'),
+        url('masquerouge.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
