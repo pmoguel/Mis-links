@@ -361,25 +361,25 @@ header#challenge-main-header {
 }
 
 .about-images {
-    display: flex; /* Aligns the pictures side by side */
-    justify-content: center; /* Centers the images horizontally */
-    gap: 20px; /* Adds spacing between the pictures */
-    margin-top: 20px; /* Adds some space above the images */
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px; 
 }
 
 .about-images img {
-    max-width: 45%; /* Keeps the pictures responsive */
-    height: auto; /* Maintains the aspect ratio */
-    border-radius: 10px; /* Adds rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    max-width: 45%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
     .about-images {
-        flex-direction: column; /* Stacks images vertically */
+        flex-direction: column;
     }
 
     .about-images img {
-        max-width: 100%; /* Images take up full width */
+        max-width: 100%;
     }
 }
