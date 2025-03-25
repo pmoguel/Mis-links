@@ -15,9 +15,27 @@
     }
 
     @font-face {
+        font-family: 'New Romantics';
+        src: url('../fonts/NewRomantics.woff2') format('woff2'),
+            url('../fonts/NewRomantics.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'Static Buzz';
+        src: url('../fonts/StaticBuzz.woff2') format('woff2'),
+            url('../fonts/StaticBuzz.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
         font-family: 'masquerouge';
-        src: url('masquerouge.woff2') format('woff2'),
-            url('masquerouge.woff') format('woff');
+        src: url('../fonts/masquerouge.woff2') format('woff2'),
+            url('../fonts/masquerouge.woff') format('woff');
         font-weight: normal;
         font-style: normal;
         font-display: swap;
@@ -25,8 +43,8 @@
     
     @font-face {
         font-family: 'Pissjar Sans piss';
-        src: url('PissjarSans-Regularpiss.woff2') format('woff2'),
-            url('PissjarSans-Regularpiss.woff') format('woff');
+        src: url('../fonts/PissjarSans-Regularpiss.woff2') format('woff2'),
+            url('../fonts/PissjarSans-Regularpiss.woff') format('woff');
         font-weight: normal;
         font-style: normal;
         font-display: swap;
@@ -36,12 +54,65 @@
 
  @font-face {
     font-family: 'ExtraBlur';
-    src: url('ExtraBlur.woff2') format('woff2'),
-        url('ExtraBlur.woff') format('woff');
+    src: url('../fonts/ExtraBlur.woff2') format('woff2'),
+        url('../fonts/ExtraBlur.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
  }
+
+ @media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-column, .right-column {
+        width: 100%; 
+        padding: 10px; 
+    }
+}
+
+ @media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; 
+    }
+
+    .right-column {
+        order: 2; 
+    }
+
+    .left-column {
+        order: 1; 
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    h1 {
+        font-size: 0.5em;
+    }
+
+    h2 {
+    text-align: center;
+     margin-left: 1em;
+    }
+
+    .about-me a {
+        font-size: 1.6em;
+    }
+
+    .right-column h2 {
+        font-size: 1em;
+    }
+
+    #challenge-nav ul li a {
+        font-size: 1.4em;
+        line-height: 1.8em;
+    }
+}
 
 body {
    color: var(--title-color);
@@ -50,6 +121,7 @@ body {
    background-color: var(--bg-color);
     font-family: 'Pissjar Sans piss', sans-serif;
     display: initial;
+    overflow-x: hidden;
 }
 
 #challenge-main-header {
@@ -57,13 +129,13 @@ body {
 }
 
 #challenge-container {
-    max-width: 1300px; /* Adjust width to desired value */
-    margin: 0 auto; /* Centers the container */
-    padding-top: 50px; /* Adds spacing on all sides */
+    max-width: 1300px;
+    margin: 0 auto; 
+    padding-top: 50px; 
 }
 
 
-/* nav */
+
 nav#challenge-nav {
     display: inline-block;
     padding: none;
@@ -84,7 +156,7 @@ nav#challenge-nav ul li {
     margin: 1em 0;
 }
 
-/* links */
+
 a {
     color: var(bacground-color);
     color: var(--title-color);
@@ -109,14 +181,14 @@ a.challenge-link {
     text-decoration: none;
 }
 
-/* footer */
+
 footer#challenge-footer {
     color: var(--high-color);
     text-transform: uppercase;
     padding: 1em;
 }
 
-/* code */
+
 pre {
     line-height: 1.2em;
 }
@@ -131,7 +203,7 @@ hr {
 }
 
 h1 {
-    font-family: Pissjar Sans piss', sans-serif;
+    font-family: 'ExtraBlur', sans-serif;
     font-size: 3.2em;
     letter-spacing: 0.2em;
     width: 100%;
@@ -139,11 +211,15 @@ h1 {
     font-display: swap;
     margin: 0 auto; 
     margin-top: 80px;
+    font-weight: 100;
 }
 
 h2 {
+    font-weight: 10;
+    font-family: ExtraBlur, sans-serif;
     text-align: center;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    margin-left: -2.5em;
 }
 
 
@@ -151,7 +227,7 @@ p {
     font-size: 1.5em;
     margin: 0 auto;
 }
-/* classes utilities */
+
 .text-center {
     text-align: center;
 }
@@ -176,13 +252,16 @@ p {
 
 picture img {
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto; 
 }
 
 .right-column {
     flex: 1;
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
 
 nav#challenge-nav ul {
@@ -217,7 +296,9 @@ header#challenge-main-header {
     text-align: center;
     background-color: transparent; 
     padding: 10px;
-    z-index: 0;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
 }
 
 #logo {
@@ -237,7 +318,7 @@ header#challenge-main-header {
 }
 
 .right-column h2 {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
@@ -263,10 +344,10 @@ header#challenge-main-header {
 }
 
 .image-hover:hover {
-    background-image: url('../img/mocap.png'); /* Replace with the hover image path */
+    background-image: url('../img/mocap.png'); 
     background-size: cover;
     background-repeat: no-repeat;
-    height: auto; /* Adjust height as needed */
+    height: auto;
 }
 
 header#challenge-main-header {
