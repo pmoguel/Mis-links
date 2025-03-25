@@ -246,7 +246,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70vh;
+    padding: 30px;
 }
 
 .left-column {
